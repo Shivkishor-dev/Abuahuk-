@@ -76,7 +76,7 @@ export default function Navbar({
                 <rect x="4" y="4" width="112" height="112" rx="16" fill="#FFFFFF" stroke="#DC2626" strokeWidth="4" />
                 <rect x="8" y="8" width="104" height="104" rx="12" fill="#FFFFFF" stroke="#FEE2E2" strokeWidth="1.5" />
                 
-                {/* Green Devanagari 'अबूआ' with shadow */}
+                {/* Green Devanagari 'अबुआ' with shadow */}
                 <text 
                   x="56" 
                   y="46" 
@@ -90,7 +90,7 @@ export default function Navbar({
                     letterSpacing: "1px"
                   }}
                 >
-                  अबूआ
+                  अबुआ
                 </text>
 
                 {/* Red Devanagari 'हक' with shadow */}
@@ -152,7 +152,7 @@ export default function Navbar({
               </span>
               <span className="text-[10px] font-mono tracking-widest text-[#22C55E] font-bold mt-1.5 uppercase flex items-center gap-1">
                 <span className="w-1.5 h-1.5 bg-[#22C55E] rounded-full animate-pulse"></span>
-                अबूआ हक (संविधान की बुलंद आवाज़)
+                अबुआ हक (संविधान की बुलंद आवाज़)
               </span>
             </div>
           </div>
