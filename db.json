@@ -1,0 +1,260 @@
+{
+  "articles": [
+    {
+      "id": "art-1",
+      "title": {
+        "en": "Dumka Archery Championship 2026: Santhali Talents Shine with Gold Medals",
+        "hi": "दुमका तीरंदाजी चैंपियनशिप 2026: संथाली प्रतिभाओं ने जीते स्वर्ण पदक",
+        "sat": "ᱫᱩᱢᱠᱟᱹ ᱟᱥᱟᱨᱼᱛᱩᱧ ᱪᱮᱢᱯᱤᱭᱟᱱᱥᱤᱯ ᱒᱐᱒᱖: ᱥᱟᱱᱛᱟᱲ ᱠᱷᱮᱞᱚᱸᱰᱤᱭᱟᱹ ᱠᱚᱣᱟᱜ ᱥᱚᱱᱟ ᱢᱮᱰᱟᱞ"
+      },
+      "subtitle": {
+        "en": "Local athletes secure comprehensive wins in standard and compound divisions, inspiring local youths.",
+        "hi": "स्थानीय खिलाड़ियों ने स्टैंडर्ड और कंपाउंड डिवीजनों में व्यापक जीत हासिल कर युवाओं को प्रेरित किया।",
+        "sat": "ᱥᱮᱱᱫᱽᱨᱟᱹ ᱵᱤᱨ ᱛᱩᱧ ᱦᱮᱯᱨᱟᱣ ᱨᱮ ᱟᱛᱩ ᱨᱮᱱ ᱠᱚᱲᱟ ᱠᱩᱲᱤ ᱦᱚᱯᱚᱱ ᱡᱤᱛᱠᱟᱹᱨ ᱮᱱᱟ ᱠᱚ"
+      },
+      "content": {
+        "en": "In an outstanding display of focus and natural archery talent, local archers dominates the state compound and standard bow divisions today. The Dumka sports complex saw over 200 participants from across seven districts. The head coach praised the dedication of tribal youth training in traditional style moving to modern bow formats. This victory opens up national-level qualifiers for several young contestants.",
+        "hi": "एकाग्रता और जन्मजात तीरंदाजी कौशल का उत्कृष्ट प्रदर्शन करते हुए, स्थानीय तीरंदाजों ने आज राज्य स्तरीय कंपाउंड और स्टैंडर्ड श्रेणियों पर कब्जा कर लिया। दुमका खेल परिसर में सात जिलों के 200 से अधिक प्रतिभागियों ने भाग लिया। मुख्य कोच ने पारंपरिक धनुष से आधुनिक धनुष स्वरूपों की ओर बढ़ने वाले आदिवासी युवाओं के समर्पण की सराहना की। यह जीत कई युवा प्रतियोगियों के लिए राष्ट्रीय स्तर के क्वालीफायर का रास्ता खोलेगी।",
+        "sat": "ᱥᱤᱧᱚᱛ ᱫᱤᱥᱚᱢ ᱨᱮᱭᱟᱜ ᱡᱷᱟᱨᱠᱷᱚᱸᱰ ᱯᱚᱱᱚᱛ ᱨᱮᱱ ᱟᱭᱢᱟ ᱠᱷᱮᱞᱚᱸᱰᱤᱭᱟᱹ ᱠᱚ ᱠᱷᱮᱞ ᱨᱮ ᱵᱷᱟᱜᱽ ᱠᱚ ᱦᱟᱛᱟᱣ ᱞᱮᱫᱼᱟ ᱟᱨ ᱥᱚᱱᱟ ᱢᱮᱰᱟᱞ ᱠᱚ ᱟᱢᱮᱴ ᱠᱮᱫᱼᱟ᱾ ᱱᱚᱶᱟ ᱡᱤᱛᱠᱟᱹᱨ ᱛᱮ ᱟᱹᱛᱩᱼᱴᱚᱞᱟ ᱡᱟᱠᱟᱛ ᱨᱮᱱ ᱡᱩᱣᱟᱹᱱ ᱠᱚᱣᱟᱜ ᱢᱚᱱᱮ ᱨᱮ ᱨᱟᱹᱥᱠᱟᱹ ᱟᱨ ᱩᱫᱽᱜᱟᱹᱣ ᱥᱤᱨᱡᱟᱹᱣ ᱨᱟᱠᱟᱵ ᱮᱱᱟ᱾ ᱮᱛᱚᱦᱚᱵ ᱥᱮᱪᱮᱫᱤᱭᱟᱹ (ᱠᱳᱪ) ᱠᱚ ᱥᱟᱨᱦᱟᱣ ᱠᱮᱫ ᱠᱚᱣᱟ᱾"
+      },
+      "category": "sports",
+      "subCategory": "State",
+      "author": {
+        "id": "auth-1",
+        "name": "Shyam Murmu",
+        "role": "Sports Desk Editor",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150"
+      },
+      "publishedAt": "2026-06-05T10:00:00Z",
+      "readingTime": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800",
+      "tags": [
+        "Dumka",
+        "Archery",
+        "Jharkhand Sports",
+        "Tribal Talents"
+      ],
+      "views": 1240,
+      "likes": 382,
+      "breaking": true,
+      "live": false,
+      "trending": true,
+      "featured": true,
+      "comments": [
+        {
+          "id": "c-1",
+          "userName": "Amit Kumar",
+          "userAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80",
+          "content": "Incredible performance by our local youth! Highly inspiring.",
+          "publishedAt": "2026-06-05T11:20:00Z",
+          "likes": 5
+        }
+      ]
+    },
+    {
+      "id": "art-2",
+      "title": {
+        "en": "Sarhul Festival Celebrated with Joyful Tree Worship Across Jharkhand",
+        "hi": "झारखंड भर में उल्लास के साथ मनाया गया सरहुल पर्व, हुई साल वृक्ष की पूजा",
+        "sat": "ᱡᱷᱟᱨᱠᱷᱚᱸᱰ ᱨᱮ ᱨᱟᱹᱥᱠᱟᱹ ᱥᱟᱞᱟᱜ ᱵᱟᱦᱟ / ᱥᱟᱨᱦᱩᱞ ᱯᱚᱨᱚᱵᱽ ᱢᱟᱱᱟᱣ ᱮᱱᱟ, ᱥᱟᱨᱡᱚᱢ ᱫᱟᱨᱮ ᱠᱚ ᱵᱚᱸᱜᱟᱣᱟᱫᱟ"
+      },
+      "subtitle": {
+        "en": "Tribal communities gather in deep reverence to offer prayers to nature and seek blessings for agriculture.",
+        "hi": "प्रकृति की उपासना करने और कृषि के लिए आशीर्वाद प्राप्त करने के लिए आदिवासी समुदाय श्रद्धापूर्वक एकजुट हुए।",
+        "sat": "ᱟᱹᱛᱩᱼᱟᱹᱛᱩ ᱨᱮ ᱡᱟᱦᱮᱨ ᱛᱷᱟᱱ ᱨᱮ ᱵᱟᱦᱟ ᱵᱚᱸᱜᱟ ᱠᱟᱛᱮ ᱪᱟᱥᱼᱵᱟᱥ ᱞᱟᱹᱜᱤᱫ ᱟᱹᱥᱤᱥ ᱠᱚ ᱦᱟᱛᱟᱣ ᱠᱮᱫᱼᱟ"
+      },
+      "content": {
+        "en": "The historic spring festival of Sarhul was celebrated today with unparalleled gaiety and deep respect for green cover. Thousands of citizens dressed in festive white and red attire joined the local prayers led by community priests. Sal tree flowers were distributed to households as symbols of prosperity and sound farming seasons ahead. Chief Minister extended warm environment-friendly greetings.",
+        "hi": "पर्यावरणीय समृद्धि और हरियाली के प्रति गहरी कृतज्ञता के साथ आज ऐतिहासिक सरहुल पर्व बड़े धूमधाम से मनाया गया। पारंपरिक पारंपरिक श्वेत और लाल वस्त्रों में सजे हजारों लोगों ने सामूहिक प्रार्थना सभाओं में हिस्सा लिया। साल वृक्ष के फूलों को समृद्धि और कृषि सुरक्षा के प्रतीक के रूप में घर-घर बांटा गया। मुख्यमंत्री ने पर्यावरण संरक्षण की अपील के साथ शुभकामनाएं दीं।",
+        "sat": "ᱜᱚᱴᱟ ᱡᱷᱟᱨᱠᱷᱚᱸᱰ ᱟᱨ ᱥᱟᱱᱛᱷᱟᱞ ᱯᱟᱨᱜᱟᱱᱟ ᱨᱮ ᱥᱟᱨᱡᱚᱢ ᱥᱟᱠᱟᱢ ᱟᱨ ᱥᱟᱨᱡᱚᱢ ᱵᱟᱦᱟ ᱛᱮ ᱥᱟᱨᱦᱩᱞ ᱯᱚᱨᱚᱵᱽ ᱡᱷᱟᱞᱠᱟᱣ ᱮᱱᱟ᱾ ᱱᱚᱶᱟ ᱫᱚ ᱫᱟᱨᱮ ᱥᱟᱠᱟᱢ ᱵᱚᱸᱜᱟ ᱟᱨ ᱫᱷᱟᱹᱨᱛᱤ ᱢᱟᱹᱭ ᱥᱟᱨᱦᱟᱣ ᱨᱮᱭᱟᱜ ᱢᱟᱨᱟᱝ ᱯᱚᱨᱚᱵᱽ ᱠᱟᱱᱟ᱾ ᱟᱹᱛᱩ ᱦᱚᱲ ᱮᱱᱮᱡ ᱥᱮᱨᱮᱧ ᱠᱟᱛᱮ ᱨᱟᱹᱥᱠᱟᱹ ᱠᱚ ᱥᱚᱫᱚᱨ ᱠᱮᱫᱼᱟ᱾"
+      },
+      "category": "opinion",
+      "subCategory": "Environment",
+      "author": {
+        "id": "auth-2",
+        "name": "Anjali Soren",
+        "role": "Cultural Columnist",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150"
+      },
+      "publishedAt": "2026-06-05T08:15:00Z",
+      "readingTime": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1545128485-c400e7702796?w=800",
+      "tags": [
+        "Sarhul",
+        "Jharkhand Festivals",
+        "Nature Worship",
+        "Santhal Pargana"
+      ],
+      "views": 932,
+      "likes": 211,
+      "breaking": false,
+      "live": false,
+      "trending": true,
+      "featured": false,
+      "comments": []
+    },
+    {
+      "id": "art-3",
+      "title": {
+        "en": "New Smart Highways Expansion Plan Approved for Santhal Districts",
+        "hi": "संथाल जिलों के लिए नई स्मार्ट हाईवे विस्तार योजना को मिली मंजूरी",
+        "sat": "ᱥᱟᱱᱛᱷᱟᱞ ᱯᱟᱨᱜᱟᱱᱟ ᱡᱤᱞᱟᱹ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱱᱟᱣᱟ ᱥᱚᱲᱚᱠ (ᱦᱟᱭᱣᱮ) ᱵᱮᱱᱟᱣ ᱩᱛᱷᱱᱟᱹᱣ ᱠᱟᱹᱢᱤᱦᱚᱨᱟ"
+      },
+      "subtitle": {
+        "en": "Over 450 kilometers of high-speed digital lanes will connect Dumka, Deoghar, and Sahibganj directly.",
+        "hi": "450 किलोमीटर से अधिक की हाई-स्पीड डिजिटल लेन दुमका, देवघर और साहिबगंज को सीधे जोड़ेगी।",
+        "sat": "᱔᱕᱐ ᱠᱤᱞᱳᱢᱤᱴᱚᱨ ᱥᱚᱲᱚᱠ ᱛᱮ ᱫᱩᱢᱠᱟᱹ, ᱫᱮᱣᱜᱷᱚᱨ ᱟᱨ ᱥᱟᱦᱮᱵᱽᱜᱚᱸᱡᱽ ᱡᱚᱲᱟᱣ ᱦᱩᱭᱩᱜᱼᱟ"
+      },
+      "content": {
+        "en": "In a major boost to regional trade and tourism, the administrative council has sanctioned the development of 450 kilometers of smart lanes with modern fiber sensors and dynamic weather advisory panels. The project will reduce general travel times between industrial zones and the administrative capital by half. Construction is set to launch early next month under green infrastructure guidelines.",
+        "hi": "क्षेत्रीय व्यापार और पर्यटन को बढ़ावा देने के लिए, प्रशासनिक परिषद ने आधुनिक फाइबर सेंसर और गतिशील मौसम सलाह पैनलों वाले 450 किलोमीटर के स्मार्ट लेन गलियारों के विकास को मंजूरी दे दी है। यह परियोजना औद्योगिक क्षेत्रों और प्रशासनिक राजधानी के बीच यात्रा के समय को आधा कर देगी। निर्माण अगले महीने की शुरुआत में शुरू होगा।",
+        "sat": "ᱵᱮᱯᱟᱨᱼᱵᱟᱹᱱᱤᱡᱽ ᱟᱨ ᱦᱮᱡᱼᱥᱮᱱ ᱞᱟᱹᱜᱤᱫ ᱱᱚᱶᱟ ᱥᱚᱲᱚᱠ ᱫᱚ ᱟᱹᱰᱤ ᱱᱟᱯᱟᱭ ᱦᱩᱭᱩᱜᱼᱟ᱾ ᱥᱚᱨᱠᱟᱨ ᱱᱚᱶᱟ ᱠᱟᱹᱢᱤᱦᱚᱨᱟ ᱞᱟᱹᱜᱤᱫ ᱵᱚᱡᱮᱴ ᱮ ᱯᱟᱥ ᱠᱮᱫᱼᱟ᱾ ᱥᱟᱱᱛᱷᱟᱞ ᱦᱚᱲ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱱᱚᱶᱟ ᱫᱚ ᱵᱮᱵᱷᱟᱨ ᱨᱮ ᱱᱟᱣᱟ [ᱩᱛᱷᱱᱟᱹᱣ] ᱦᱩᱭᱩᱜᱼᱟ᱾"
+      },
+      "category": "politics",
+      "subCategory": "Development",
+      "author": {
+        "id": "auth-3",
+        "name": "Prem Soren",
+        "role": "State Capital Bureau",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150"
+      },
+      "publishedAt": "2026-06-04T12:30:00Z",
+      "readingTime": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+      "tags": [
+        "Infrastructure",
+        "Santhal Pargana",
+        "Smart Highways",
+        "Jharkhand News"
+      ],
+      "views": 1802,
+      "likes": 495,
+      "breaking": false,
+      "live": false,
+      "trending": false,
+      "featured": false,
+      "comments": []
+    },
+    {
+      "id": "art-4",
+      "title": {
+        "en": "Tribal Language Learning App Takes Off in Rural Schools of Dumka",
+        "hi": "दुमका के ग्रामीण स्कूलों में आदिवासी भाषा लर्निंग ऐप को मिल रही बड़ी सफलता",
+        "sat": "ᱫᱩᱢᱠᱟᱹ ᱨᱮᱭᱟᱜ ᱟᱛᱩ ᱟᱥᱲᱟ ᱠᱚᱨᱮ ᱥᱟᱱᱛᱟᱲᱤ ᱚᱞ ᱪᱤᱠᱤ ᱞᱟᱹᱱᱤᱝ ᱮᱯ ᱨᱮᱭᱟᱜ ᱢᱟᱨᱟᱝ ᱠᱟᱹᱢᱤ"
+      },
+      "subtitle": {
+        "en": "Interactive visual modules helping students master Ol Chiki alphabet and traditional folk narratives through gamified levels.",
+        "hi": "इंटरैक्टिव विजुअल मॉड्यूल छात्रों को सरलीकृत गेम स्तरों के माध्यम से ओल चिकी वर्णमाला और पारंपरिक लोक कथाओं में महारत हासिल करने में मदद कर रहे हैं।",
+        "sat": "ᱜᱤᱫᱽᱨᱟᱹ ᱠᱚ ᱢᱚᱵᱟᱭᱤᱞ ᱮᱯ ᱞᱮᱠᱟᱛᱮ ᱟᱹᱰᱤ ᱟᱞᱜᱟ ᱛᱮ ᱚᱞ ᱪᱤᱠᱤ ᱟᱠᱷᱚᱨ ᱟᱨ ᱠᱟᱹᱦᱱᱤ ᱠᱚ ᱪᱮᱫᱚᱜ ᱠᱟᱱᱟ"
+      },
+      "content": {
+        "en": "An innovative digital textbook with offline-capable audio modules is transforming tribal language education in primary levels. Over 60 government-run facilities in Ranchi and Dumka have initiated tablet-based interactive games for kids. The software makes understanding complex historical spellings simple and bridges remote student ratios comfortably. Teachers notice an immediate jump in weekly attendance metrics.",
+        "hi": "ऑफलाइन-सक्षम ऑडियो मॉड्यूल के साथ एक अभिनव डिजिटल पाठ्यपुस्तक प्राथमिक स्तर पर आदिवासी भाषा शिक्षा को बदल रही है। रांची और दुमका की 60 से अधिक सरकारी स्कूलों में टैबलेट-आधारित इंटरैक्टिव गेम शुरू किए गए हैं। शिक्षक साप्ताहिक उपस्थिति में उल्लेखनीय वृद्धि दर्ज कर रहे हैं।",
+        "sat": "ᱱᱟᱦᱟᱜ ᱡᱩᱜᱽ ᱨᱮ ᱠᱚᱢᱯᱩᱴᱚᱨ ᱟᱨ ᱢᱚᱵᱟᱭᱤᱞ ᱨᱮ ᱚᱞ ᱪᱤᱠᱤ ᱪᱮᱫᱚᱜ ᱞᱟᱹᱜᱤᱫ ᱮᱯᱞᱤᱠᱮᱥᱚᱱ ᱵᱮᱱᱟᱣ ᱟᱠᱟᱱᱟ᱾ ᱜᱤᱫᱽᱨᱟᱹ ᱠᱚ ᱟᱹᱰᱤ ᱨᱟᱹᱥᱠᱟᱹ ᱛᱮ ᱟᱹᱲᱟᱹ ᱠᱚ ᱪᱮᱫᱚᱜ ᱠᱟᱱᱟ ᱟᱨ ᱟᱥᱲᱟ ᱨᱮ ᱦᱟᱹᱡᱩᱜ ᱠᱚ ᱮᱛᱚᱦᱚᱵ ᱠᱮᱫᱼᱟ᱾"
+      },
+      "category": "education",
+      "subCategory": "Technology",
+      "author": {
+        "id": "auth-4",
+        "name": "Lalita Marandi",
+        "role": "Tech and Social Editor",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150"
+      },
+      "publishedAt": "2026-06-03T15:00:00Z",
+      "readingTime": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800",
+      "tags": [
+        "Ol Chiki",
+        "Digital Learning",
+        "Santhal Education",
+        "Primary Schools"
+      ],
+      "views": 742,
+      "likes": 198,
+      "breaking": false,
+      "live": false,
+      "trending": false,
+      "featured": false,
+      "comments": []
+    }
+  ],
+  "polls": [
+    {
+      "id": "poll-1",
+      "question": {
+        "en": "Do you support the integration of tribal languages in default state primary education core curriculum?",
+        "hi": "क्या आप प्राथमिक शिक्षा के कोर पाठ्यक्रम में स्थानीय आदिवासी भाषाओं को शामिल करने का समर्थन करते हैं?",
+        "sat": "ᱪᱮᱫ ᱟᱢᱮᱢ ᱠᱩᱥᱤᱭᱟᱜ ᱠᱟᱱᱟ ᱟᱥᱲᱟ ᱨᱮ ᱟᱭᱳ ᱟᱲᱟᱝ (ᱥᱟᱱᱛᱟᱲᱤ) ᱛᱮ ᱯᱟᱲᱦᱟᱣ ᱠᱟᱹᱢᱤᱦᱚᱨᱟ?"
+      },
+      "options": [
+        {
+          "id": "opt-1",
+          "text": {
+            "en": "Absolutely, it preserves rich culture",
+            "hi": "बिल्कुल, यह समृद्ध संस्कृति का संरक्षण करता है",
+            "sat": "ᱦᱮᱸ, ᱱᱚᱶᱟ ᱛᱮ ᱟᱵᱚᱣᱟᱜ ᱥᱚᱸᱥᱠᱨᱤᱛᱤ ᱵᱟᱧᱪᱟᱣ ᱛᱟᱦᱮᱸᱱᱟ"
+          },
+          "votes": 420
+        },
+        {
+          "id": "opt-2",
+          "text": {
+            "en": "Yes, optionally for regional zones",
+            "hi": "हाँ, क्षेत्रीय क्षेत्रों के लिए वैकल्पिक रूप से",
+            "sat": "ᱚᱯᱥᱚᱱᱟᱞ ᱞᱮᱠᱟᱛᱮ ᱪᱮᱫᱚᱜ ᱠᱟᱱᱟ"
+          },
+          "votes": 180
+        },
+        {
+          "id": "opt-3",
+          "text": {
+            "en": "No, secondary focus is ideal",
+            "hi": "नहीं, द्वितीयक ध्यान ही काफी है",
+            "sat": "ᱵᱟᱝ, ᱚᱱᱟ ᱫᱚ ᱵᱟᱝ ᱞᱟᱹᱠᱛᱤᱭᱟ"
+          },
+          "votes": 35
+        }
+      ],
+      "active": true,
+      "totalVotes": 635
+    }
+  ],
+  "advisoryBanners": [
+    {
+      "id": "ad-1",
+      "title": {
+        "en": "Learn Ol Chiki Script Online - Free Course Starting Soon!",
+        "hi": "ऑनलाइन ओल चिकी लिपि सीखें - मुफ्त कोर्स जल्द शुरू हो रहा है!",
+        "sat": "ᱚᱱᱞᱟᱭᱤᱱ ᱛᱮ ᱚᱞ ᱪᱤᱠᱤ ᱪᱮᱫᱚᱜ ᱯᱮ - ᱵᱤᱱᱟᱹ ᱯᱩᱭᱥᱟᱹ ᱛᱮ ᱮᱛᱚᱦᱚᱵᱚᱜ ᱠᱟᱱᱟ"
+      },
+      "link": "#",
+      "type": "top_banner",
+      "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000",
+      "active": true,
+      "clicks": 121
+    },
+    {
+      "id": "ad-2",
+      "title": {
+        "en": "Sohrai Traditional Arts Exhibition Jamshedpur 2026",
+        "hi": "सोहराई पारंपरिक कला प्रदर्शनी जमशेदपुर 2026",
+        "sat": "ᱥᱚᱦᱨᱟᱭ ᱪᱤᱛᱟᱹᱨ ᱟᱨ ᱦᱩᱱᱟᱹᱨ ᱩᱫᱩᱜ ᱥᱚᱫᱚᱨ ᱡᱟᱢᱥᱮᱫᱽᱯᱩᱨ"
+      },
+      "link": "#",
+      "type": "sidebar_square",
+      "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=450",
+      "active": true,
+      "clicks": 43
+    }
+  ],
+  "settings": {
+    "siteName": "Abua Hak News",
+    "contactEmail": "pradeepsoren690@gmail.com",
+    "adSenseClientId": "pub-8429104058291040",
+    "breakingNewsScrollSpeed": 15,
+    "liveTvStreamUrl": "https://www.youtube.com/embed/jfKfPfyJRdk"
+  },
+  "subscribers": [
+    "user@preview.com"
+  ]
+}

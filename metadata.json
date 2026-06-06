@@ -1,0 +1,6 @@
+{
+  "name": "Abua Hak",
+  "description": "A modern, premium news portal website featuring real-time bulletins, multi-language support (English, Hindi, and Santali), interactive tools, and integrated AI journalism assistants.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
