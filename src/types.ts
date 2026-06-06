@@ -3,7 +3,6 @@ export type LanguageType = "en" | "hi";
 export interface LocalizedText {
   en: string;
   hi: string;
-  sat?: string; // Optionalized Santali
 }
 
 export interface Author {
@@ -42,6 +41,7 @@ export interface Article {
   live: boolean;
   trending: boolean;
   featured: boolean;
+  comments?: Comment[];
   scheduledAt?: string;
 }
 
