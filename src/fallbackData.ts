@@ -207,7 +207,7 @@ export const INITIAL_FALLBACK_ADS: AdvisoryBanner[] = [
 export const INITIAL_FALLBACK_SETTINGS: SiteSettings = {
   siteName: "Abua Hak News",
   contactEmail: "pradeepsoren690@gmail.com",
-  adSenseClientId: "pub-8429104058291040",
+  adSenseClientId: "ca-pub-3565174101767371",
   breakingNewsScrollSpeed: 15,
   liveTvStreamUrl: "https://www.youtube.com/embed/jfKfPfyJRdk"
 };
