@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { 
   Search, BookMarked, Radio, Flame, Mail, Send, CheckCircle2, 
   MapPin, Eye, ThumbsUp, Calendar, ArrowRight, UserCheck, Play, 
-  X, Layers, Film, Compass, MessageSquare, Newspaper
+  X, Layers, Film, Compass, MessageSquare, Newspaper,
+  Youtube, Instagram, Facebook, Twitter
 } from "lucide-react";
 import Navbar from "./components/Navbar";
 import BreakingNewsTicker from "./components/BreakingNewsTicker";
@@ -1087,6 +1088,54 @@ export default function App() {
                 </div>
               </div>
 
+              {/* 7.5 SOCIAL CONNECTS CARD */}
+              <div className="bg-zinc-900 border border-zinc-850 p-4 rounded-xl shadow-sm space-y-3">
+                <div className="flex items-center gap-1.5 border-b border-zinc-800 pb-2 mb-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-650 animate-pulse"></span>
+                  <span className="text-[10px] font-mono font-extrabold tracking-wider uppercase text-zinc-300">
+                    {currentLang === "hi" ? "सोशल मीडिया से जुड़ें" : "FOLLOW ABUA HAK NEWS"}
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-2 text-[11px]">
+                  <a 
+                    href="https://youtube.com/@abuahaknews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 p-2 rounded-lg bg-[#FF0000]/10 hover:bg-[#FF0000]/20 border border-[#FF0000]/15 hover:border-[#FF0000]/30 text-rose-400 font-bold transition-colors cursor-pointer"
+                  >
+                    <Youtube className="w-3.5 h-3.5 text-[#FF0000] shrink-0" />
+                    <span>YouTube</span>
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/abuahaknews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 p-2 rounded-lg bg-[#E1306C]/10 hover:bg-[#E1306C]/20 border border-[#E1306C]/15 hover:border-[#E1306C]/30 text-pink-400 font-bold transition-colors cursor-pointer"
+                  >
+                    <Instagram className="w-3.5 h-3.5 text-[#E1306C] shrink-0" />
+                    <span>Instagram</span>
+                  </a>
+                  <a 
+                    href="https://facebook.com/AbuaHakNews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 p-2 rounded-lg bg-[#1877F2]/10 hover:bg-[#1877F2]/20 border border-[#1877F2]/15 hover:border-[#1877F2]/30 text-blue-400 font-bold transition-colors cursor-pointer"
+                  >
+                    <Facebook className="w-3.5 h-3.5 text-[#1877F2] shrink-0" />
+                    <span>Facebook</span>
+                  </a>
+                  <a 
+                    href="https://x.com/AbuaHakNews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 p-2 rounded-lg bg-zinc-800/40 hover:bg-zinc-800/80 border border-zinc-800 hover:border-zinc-700 text-zinc-300 font-bold transition-colors cursor-pointer"
+                  >
+                    <Twitter className="w-3.5 h-3.5 text-zinc-350 shrink-0" />
+                    <span>Twitter / X</span>
+                  </a>
+                </div>
+              </div>
+
             </div>
 
           </div>
@@ -1207,13 +1256,60 @@ export default function App() {
 
         {/* Global Directory list */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold text-red-500 uppercase tracking-wider">
-              Abua Hak Network
-            </h4>
-            <p className="text-xs text-zinc-450 leading-relaxed max-w-xs">
-              State-of-the-art independent tribal journalism. Empowering local stories across Dumka sub-capital and Chota Nagpur range in English & Hindi dialects.
-            </p>
+          <div className="space-y-4">
+            <div>
+              <h4 className="text-xs font-mono font-bold text-red-500 uppercase tracking-wider mb-2">
+                Abua Hak Network
+              </h4>
+              <p className="text-xs text-zinc-450 leading-relaxed max-w-xs">
+                State-of-the-art independent tribal journalism. Empowering local stories across Dumka sub-capital and Chota Nagpur range in English & Hindi dialects.
+              </p>
+            </div>
+            
+            {/* Social Links under desc */}
+            <div className="space-y-2">
+              <h5 className="text-[10px] font-mono font-semibold text-zinc-500 uppercase tracking-wider">
+                Our Channels / लोकल नेटवर्क
+              </h5>
+              <div className="flex items-center gap-3">
+                <a 
+                  href="https://youtube.com/@abuahaknews" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  title="YouTube Subscribe" 
+                  className="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-400 hover:text-rose-500 hover:bg-[#FF0000]/5 transition cursor-pointer"
+                >
+                  <Youtube className="w-4 h-4" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/abuahaknews" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  title="Instagram Follow" 
+                  className="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-400 hover:text-pink-500 hover:bg-[#E1306C]/5 transition cursor-pointer"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a 
+                  href="https://facebook.com/AbuaHakNews" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  title="Facebook Like" 
+                  className="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-400 hover:text-blue-500 hover:bg-[#1877F2]/5 transition cursor-pointer"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a 
+                  href="https://x.com/AbuaHakNews" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  title="Twitter / X Follow" 
+                  className="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-400 hover:text-white hover:bg-white/5 transition cursor-pointer"
+                >
+                  <Twitter className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="space-y-1.5 text-xs text-zinc-400">
