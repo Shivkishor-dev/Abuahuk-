@@ -10,6 +10,9 @@ import WeatherWidget from "./components/WeatherWidget";
 import PollWidget from "./components/PollWidget";
 import ArticleView from "./components/ArticleView";
 import AdminPanel from "./components/AdminPanel";
+import SearchOverlay from "./components/SearchOverlay";
+import UserProfile from "./components/UserProfile";
+import MobileBottomNav from "./components/MobileBottomNav";
 import { Article, LanguageType, PollDefinition, AdvisoryBanner, SiteSettings, Comment } from "./types";
 import { 
   INITIAL_FALLBACK_ARTICLES, 
@@ -35,6 +38,7 @@ export default function App() {
   // UI Navigation control
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
   const [showAdminConsole, setShowAdminConsole] = useState(false);
+  const [isAdminUrlMode, setIsAdminUrlMode] = useState(false);
   const [showLiveTvDrawer, setShowLiveTvDrawer] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
@@ -51,9 +55,49 @@ export default function App() {
   const [emailInput, setEmailInput] = useState("");
   const [newsletterSubscribed, setNewsletterSubscribed] = useState(false);
 
+  // Modern Premium customized overlays and user desk stats
+  const [showSearchOverlay, setShowSearchOverlay] = useState(false);
+  const [showProfileDashboard, setShowProfileDashboard] = useState(false);
+  const [userProfileName, setUserProfileName] = useState(() => localStorage.getItem("abua-user-name") || "Pradeep Soren");
+  
+  const [readingHistory, setReadingHistory] = useState<string[]>(() => {
+    try {
+      const logs = localStorage.getItem("abua-reading-logs");
+      return logs ? JSON.parse(logs) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  // Automatically record opened articles inside History Logs
+  useEffect(() => {
+    if (selectedArticle) {
+      setReadingHistory(prev => {
+        const cleaned = prev.filter(id => id !== selectedArticle.id);
+        const updated = [selectedArticle.id, ...cleaned].slice(0, 15);
+        localStorage.setItem("abua-reading-logs", JSON.stringify(updated));
+        return updated;
+      });
+      setShowProfileDashboard(false);
+      setShowAdminConsole(false);
+    }
+  }, [selectedArticle]);
+
   // Load backend data on Mount
   useEffect(() => {
     fetchData();
+    
+    // Check if standard admin parameter is defined in query string to load admin console
+    const isParamAdmin = window.location.search.includes("admin") || window.location.hash.includes("admin");
+    if (isParamAdmin) {
+      setShowAdminConsole(true);
+      setTimeout(() => {
+        const el = document.getElementById("admin-bottom-section");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 800);
+    }
   }, []);
 
   const fetchData = async () => {
@@ -511,16 +555,36 @@ export default function App() {
         isAdminLoggedIn={true} // In preview mode, allow quick debug access to editor dash
         onLogoutAdmin={() => setShowAdminConsole(false)}
         onOpenAdmin={() => {
-          setShowAdminConsole(!showAdminConsole);
-          setSelectedArticle(null); // Clear selected article to focus on admin console
+          const nextState = !showAdminConsole;
+          setShowAdminConsole(nextState);
+          if (nextState) {
+            setTimeout(() => {
+              const el = document.getElementById("admin-bottom-section");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }, 150);
+          }
         }}
         onGoHome={() => {
           setSelectedArticle(null);
           setShowAdminConsole(false);
+          setShowProfileDashboard(false);
           setCategoryFilter("all");
           setSearchQuery("");
         }}
         onOpenLiveTv={() => setShowLiveTvDrawer(true)}
+        onTriggerSearch={() => setShowSearchOverlay(true)}
+        onTriggerProfile={() => {
+          setShowProfileDashboard(true);
+          setSelectedArticle(null);
+          setShowAdminConsole(false);
+        }}
+        activeView={
+          showAdminConsole ? "admin" :
+          showProfileDashboard ? "profile" :
+          selectedArticle ? "article" : "home"
+        }
       />
 
       {/* FLASH NEWS BLOCK TICKER */}
@@ -600,21 +664,31 @@ export default function App() {
           </div>
         )}
 
-        {/* ======================================= */}
-        {/* ROUTE VIEW B: ADMIN BOARD FOR EDITORS */}
-        {/* ======================================= */}
-        {showAdminConsole ? (
-          <AdminPanel 
+        {showProfileDashboard ? (
+          /* ======================================= */
+          /* ROUTE VIEW B.2: PREMIUM USER DASHBOARD  */
+          /* ======================================= */
+          <UserProfile 
             currentLang={currentLang}
+            darkMode={darkMode}
+            bookmarkedIds={bookmarkedIds}
             articles={articles}
-            polls={polls}
-            ads={ads}
-            settings={settings}
-            onSaveArticle={handleSaveArticle}
-            onDeleteArticle={handleDeleteArticle}
-            onSaveSettings={handleSaveSettings}
-            onSaveAds={handleSaveAds}
-            onClose={() => setShowAdminConsole(false)}
+            readingHistory={readingHistory}
+            onSelectArticle={(art) => {
+              setSelectedArticle(art);
+              setShowProfileDashboard(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            onClearHistory={() => {
+              localStorage.removeItem("abua-reading-logs");
+              setReadingHistory([]);
+            }}
+            onLogout={() => {
+              localStorage.removeItem("abua-user-name");
+              setUserProfileName("Guest");
+              setShowProfileDashboard(false);
+            }}
+            onUpdateName={(newName) => setUserProfileName(newName)}
           />
         ) : selectedArticle ? (
           /* ======================================= */
@@ -885,7 +959,7 @@ export default function App() {
                       </p>
                       <button
                         onClick={() => setShowLiveTvDrawer(true)}
-                        className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-xs font-bold font-mono tracking-wider flex items-center gap-1.5 transition uppercase"
+                        className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-xs font-bold font-mono tracking-wider flex items-center gap-1.5 transition uppercase cursor-pointer"
                       >
                         <Play className="w-3.5 h-3.5" />
                         <span>Launch Pro Cinema feed</span>
@@ -1018,6 +1092,68 @@ export default function App() {
           </div>
         )}
 
+        {/* ======================================= */}
+        {/* INTEGRATED BOTTOM ADMIN CONTROL PANEL / कंट्रोल डेस्क */}
+        {/* ======================================= */}
+        <div className="mt-16 border-t-2 border-dashed border-red-650/35 pt-12" id="admin-bottom-section">
+          <div className="bg-gradient-to-br from-red-950/20 to-slate-900 border border-red-500/30 rounded-2xl p-6 shadow-2xl relative overflow-hidden group">
+            {/* Visual environmental glowing accent */}
+            <div className="absolute -top-12 -right-12 w-36 h-36 bg-red-650/10 rounded-full blur-3xl group-hover:bg-red-650/20 transition-all duration-500"></div>
+            
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+              <div className="space-y-1">
+                <span className="inline-flex items-center gap-1.5 bg-red-500/10 border border-red-500/35 text-red-400 font-mono text-[10px] tracking-widest px-3 py-1 rounded-full uppercase">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                  Secure Editorial Suite
+                </span>
+                <h2 className="text-lg md:text-xl font-black tracking-tight text-white uppercase font-display flex flex-wrap items-center gap-2 pt-2">
+                  <span>📰 ABUA HAK PUBLISHER PANEL</span>
+                  <span className="text-xs text-zinc-405 font-normal">({currentLang === "hi" ? "कंट्रोल डेस्क" : "Control Desk Portal"})</span>
+                </h2>
+                <p className="text-xs text-zinc-400 max-w-2xl">
+                  {currentLang === "hi" 
+                    ? "नए समाचार लेख पोस्ट करें, ब्रेकिंग न्यूज अलर्ट्स सेट करें, विज्ञापन बदलें और लाइव टीवी स्ट्रीम यूआरएल को अपडेट करें।" 
+                    : "Draft & publish live tribal dispatches, moderate user comments, set customized advertising headers, and control system properties."}
+                </p>
+              </div>
+
+              <button
+                onClick={() => {
+                  setShowAdminConsole(!showAdminConsole);
+                  if (!showAdminConsole) {
+                    setTimeout(() => {
+                      const el = document.getElementById("admin-bottom-section");
+                      if (el) el.scrollIntoView({ behavior: "smooth" });
+                    }, 150);
+                  }
+                }}
+                className="bg-gradient-to-r from-red-600 to-red-750 hover:from-red-650 hover:to-red-850 text-white font-mono text-xs font-black tracking-wider py-3 px-6 rounded-xl flex items-center gap-2 transition-all duration-200 cursor-pointer shadow-lg shadow-red-950/20 active:scale-[98] shrink-0"
+              >
+                <span>{showAdminConsole ? "CLOSE CONTROL DESK" : "OPEN CONTROL DESK / कंट्रोल डेस्क खोलें"}</span>
+                <ArrowRight className={`w-4 h-4 text-zinc-100 transition-transform duration-250 ${showAdminConsole ? "rotate-90" : ""}`} />
+              </button>
+            </div>
+
+            {/* Expanded Admin Panel Frame inside Container */}
+            {showAdminConsole && (
+              <div className="mt-8 pt-8 border-t border-zinc-805" id="active-admin-panel-anchor">
+                <AdminPanel 
+                  currentLang={currentLang}
+                  articles={articles}
+                  polls={polls}
+                  ads={ads}
+                  settings={settings}
+                  onSaveArticle={handleSaveArticle}
+                  onDeleteArticle={handleDeleteArticle}
+                  onSaveSettings={handleSaveSettings}
+                  onSaveAds={handleSaveAds}
+                  onClose={() => setShowAdminConsole(false)}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+
       </main>
 
       {/* ======================================= */}
@@ -1118,20 +1254,70 @@ export default function App() {
               <span className="hidden md:inline text-zinc-800">|</span>
               <button
                 onClick={() => {
-                  setShowAdminConsole(!showAdminConsole);
-                  setSelectedArticle(null);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  setShowAdminConsole(true);
+                  setTimeout(() => {
+                    const el = document.getElementById("admin-bottom-section");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
                 }}
                 className="text-[11px] font-bold tracking-widest text-zinc-400 hover:text-red-500 transition-colors flex items-center gap-2 cursor-pointer bg-zinc-900/40 hover:bg-zinc-900/90 border border-zinc-850 px-3 py-1.5 rounded-lg"
               >
-                <UserCheck className="w-3.5 h-3.5 text-red-500" />
-                <span>EDITORIAL DESK PORTAL</span>
+                <span>EDITORIAL CONTROL DESK / कंट्रोल डेस्क ✍️</span>
               </button>
             </div>
           </div>
         </div>
 
       </footer>
+
+      {/* Modern interactive responsive search overlay dialog */}
+      <SearchOverlay 
+        currentLang={currentLang}
+        articles={articles}
+        isOpen={showSearchOverlay}
+        onClose={() => setShowSearchOverlay(false)}
+        onSelectArticle={(art) => {
+          setSelectedArticle(art);
+          setShowAdminConsole(false);
+          setShowProfileDashboard(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      />
+
+      {/* Sticky Bottom Navigation for Mobile UI Viewports */}
+      <MobileBottomNav 
+        currentLang={currentLang}
+        darkMode={darkMode}
+        bookmarkedCount={bookmarkedIds.length}
+        activeView={
+          showProfileDashboard ? "profile" : 
+          selectedArticle ? "article" : "home"
+        }
+        onTriggerHome={() => {
+          setSelectedArticle(null);
+          setShowAdminConsole(false);
+          setShowProfileDashboard(false);
+          setCategoryFilter("all");
+          setSearchQuery("");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        onTriggerSearch={() => setShowSearchOverlay(true)}
+        onTriggerProfile={() => {
+          setShowProfileDashboard(true);
+          setSelectedArticle(null);
+          setShowAdminConsole(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        onTriggerCategoryDrawer={() => {
+          setSelectedArticle(null);
+          setShowAdminConsole(false);
+          setShowProfileDashboard(false);
+          // Auto scroll to subnavigation category tabs on home
+          setTimeout(() => {
+            document.getElementById("home-subnavigation-tabs")?.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }}
+      />
 
     </div>
   );
