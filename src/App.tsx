@@ -14,6 +14,7 @@ import AdminPanel from "./components/AdminPanel";
 import SearchOverlay from "./components/SearchOverlay";
 import UserProfile from "./components/UserProfile";
 import MobileBottomNav from "./components/MobileBottomNav";
+import AdsterraBanner from "./components/AdsterraBanner";
 import { Article, LanguageType, PollDefinition, AdvisoryBanner, SiteSettings, Comment } from "./types";
 import { 
   INITIAL_FALLBACK_ARTICLES, 
@@ -598,6 +599,9 @@ export default function App() {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       />
+
+      {/* ADSTERRA PREMIUM SCRIPT BANNER */}
+      <AdsterraBanner currentLang={currentLang} />
 
       {/* TOP COMMERCIAL BANNER (IF ACTIVE) */}
       {ads.length > 0 && ads[0].active && (
